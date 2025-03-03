@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer a Ride</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #dde5f4, #b3c6e8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            width: 90%;
+            max-width: 400px; /* Box width */
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 15px;
+            text-align: center;
+            background: #3e4684;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            background: #f1f1f1;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #3e4684;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #3e4684;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #3e4684;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #3e4684;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2c325d;
+        }
+
+        .info-box {
+            margin-top: 5px;
+            padding: 2px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #3e4684;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome Back, John Doe</h1>
+        </div>
+
+        <div class="nav">
+            <a href="find.html">Find Ride</a>
+            <a href="offer.html">Offer Ride</a>
+            <div>
+                <a href="home.html">Home</a> |
+                <a href="profile.html">Profile</a> |
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Offer a Ride</h2>
+            <p>Help others reach their destination while making new connections!</p>
+
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" name="from" placeholder="Starting Location" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="to" placeholder="Destination" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="seats" placeholder="Available Seats" required>
+                </div>
+                <button type="submit">Post Ride</button>
+            </form>
+
+            <div class="info-box">
+                <p>By offering a ride, you can save fuel, reduce traffic, and contribute to a sustainable future!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Ride</title>
+    <style>
+        /* General reset */
+        body, h1, p, button {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #d6e3f5, #dde5f4); /* Smooth blue background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background-color: #3e4684; /* Dark blue background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Filters Section */
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .filter-input {
+            width: 30%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        /* Ride Cards Section */
+        .ride-list {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ride-card {
+            background-color: #fdf5e6; /* Light beige background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .ride-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .ride-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ride-details p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .ride-details strong {
+            color: #333;
+        }
+
+        .contact-btn {
+            margin-top: 15px;
+            background-color: #3e4684; /* Dark blue */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #2c325d; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Drivers Offering Rides
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filters">
+            <input type="text" class="filter-input" placeholder="From..." />
+            <input type="text" class="filter-input" placeholder="To..." />
+            <input type="time" class="filter-input" />
+        </div>
+
+        <!-- Ride List Section -->
+        <div class="ride-list">
+            <!-- Ride Card 1 -->
+            <div class="ride-card">
+                <div class="ride-details">
+                    <p><strong>Driver:</strong> John Doe</p>
+                    <p><strong>From:</strong> Downtown | <strong>To:</strong> Airport</p>
+                    <p><strong>Via:</strong> Highway 10</p>
+                    <p><strong>Time:</strong> 9:30 AM</p>
+                </div>
+                <button class="contact-btn">Contact</button>
+            </div>
+
+            <!-- Ride Card 2 -->
+            <div class="ride-card">
+                <div class="ride-details">
+                    <p><strong>Driver:</strong> Jane Smith</p>
+                    <p><strong>From:</strong> City Center | <strong>To:</strong> University</p>
+                    <p><strong>Via:</strong> Main Street</p>
+                    <p><strong>Time:</strong> 10:00 AM</p>
+                </div>
+                <button class="contact-btn">Contact</button>
+            </div>
+
+            <!-- Ride Card 3 -->
+            <div class="ride-card">
+                <div class="ride-details">
+                    <p><strong>Driver:</strong> Sam Wilson</p>
+                    <p><strong>From:</strong> Northside | <strong>To:</strong> Southside</p>
+                    <p><strong>Via:</strong> Route 22</p>
+                    <p><strong>Time:</strong> 11:15 AM</p>
+                </div>
+                <button class="contact-btn">Contact</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

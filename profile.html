@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #dde5f4, #b3c6e8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+            color: #3e4684;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 auto 15px;
+            border: 3px solid #3e4684;
+        }
+
+        .change-photo {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            background: #3e4684;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .change-photo:hover {
+            background: #2d3463;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #f8f9fc;
+        }
+
+        input:focus, textarea:focus {
+            border: 1px solid #3e4684;
+            outline: none;
+            box-shadow: 0 0 5px rgba(62, 70, 132, 0.5);
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn-save {
+            background: #3e4684;
+            color: #fff;
+        }
+
+        .btn-cancel {
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        .btn-save:hover {
+            background: #2d3463;
+            transform: translateY(-2px);
+        }
+
+        .btn-cancel:hover {
+            background: #ddd;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #3e4684;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Edit Your Profile</div>
+        <div class="profile-img"></div>
+        <a href="#" class="change-photo">Change Photo</a>
+
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter first name">
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter last name">
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" placeholder="Enter mobile number">
+            </div>
+
+            <!-- New Sections for Ride Sharing Info -->
+            <div class="form-group">
+                <label for="ride-offered">Ride Offered</label>
+                <input type="text" id="ride-offered" placeholder="Enter ride details (e.g., Route, Time)">
+            </div>
+
+            <div class="form-group">
+                <label for="ride-availability">Availability</label>
+                <input type="text" id="ride-availability" placeholder="Enter your availability (e.g., Weekly, Weekends)">
+            </div>
+
+            <!-- Description field replacing rating -->
+            <div class="form-group">
+                <label for="description">About Yourself</label>
+                <textarea id="description" placeholder="Tell us a bit about yourself, your interests, and experiences"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-cancel">Cancel</button>
+                <button type="submit" class="btn btn-save">Save</button>
+            </div>
+        </form>
+        
+        <div class="footer">
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </div>
+    </div>
+</body>
+</html>

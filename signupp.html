@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling Signup</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #6fa3ef, #85c4e6); /* Soft blue gradient */
+            overflow: hidden;
+        }
+
+        .signup-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 380px; /* Smaller width for compact layout */
+            text-align: left; /* Align text to the left */
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .signup-container h1 {
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #4c8ccf; /* Blue header */
+            letter-spacing: 1px;
+            text-align: center; /* Center the header */
+        }
+
+        .signup-container input,
+        .signup-container select {
+            width: 100%; /* Full width for compact layout */
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px; /* Rounded corners for inputs */
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .signup-container input:focus,
+        .signup-container select:focus {
+            border-color: #4c8ccf; /* Blue color for input focus */
+        }
+
+        .signup-container button {
+            background: linear-gradient(135deg, #0d5cb0, #165daa); /* Blue gradient button */
+            color: white;
+            padding: 14px;
+            width: 100%; /* Button width matches input */
+            border: none;
+            border-radius: 12px; /* Rounded corners for button */
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .signup-container button:hover {
+            background: linear-gradient(135deg, #092c52, #073a6b);
+            transform: translateY(-3px);
+        }
+
+        .signup-container a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #225fa0; /* Blue link color */
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            text-align: center; /* Center the link */
+        }
+
+        .signup-container a:hover {
+            color: #184578;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Carpool Signup</h1>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            
+            <label for="role">I am a:</label>
+            <select name="role" id="role" required>
+                <option value="driver">Driver</option>
+                <option value="passenger">Passenger</option>
+            </select>
+            
+            <input type="text" name="location" placeholder="Pickup Location" required>
+            <input type="text" name="destination" placeholder="Destination" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <a href="#">Already have an account? Login</a>
+    </div>
+</body>
+</html>
